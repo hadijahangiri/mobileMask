@@ -17,10 +17,7 @@ npm i mobilemask
 Load the script files in your application:
 
 ```html
-<script
-  type="text/javascript"
-  src="node_modules/mobilemask/dist/mobileMask.js"
-></script>
+<script type="text/javascript" src="node_modules/mobilemask/dist/mobileMask.js"></script>
 ```
 
 ```javascript

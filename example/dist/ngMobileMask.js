@@ -46,6 +46,7 @@
 
           $scope.checkNumber = function(item) {
             var isOk = true;
+            if (!item.value) return;
             if (item.value.length > 1) {
               var stringValue = item.value.toString();
               item.value = parseInt(stringValue.substring(0, 1));
@@ -72,7 +73,6 @@
             });
 
             $scope.ngModel = ouput;
-            console.log(ouput);
           };
         }
       };
