@@ -57,8 +57,5 @@ if first number less or bigger than valid numbers
 ## for use css
 
 ```html
-<link
-  href="dist/css/myStyles.css"
-  rel="node_modules/mobilemask/dist/mobileMask.css"
-/>
+<link href="dist/css/myStyles.css" rel="node_modules/mobilemask/dist/mobileMask.css"/>
 ```
