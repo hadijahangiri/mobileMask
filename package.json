@@ -1,0 +1,26 @@
+{
+  "name": "mobilemask",
+  "version": "1.0.0",
+  "description": "Mobile mask directive for angularjs",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadijahangiri/mobileMask.git"
+  },
+  "keywords": [
+    "angularjs",
+    "mobilemask"
+  ],
+  "author": "Hadi Jahangiri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hadijahangiri/mobileMask/issues"
+  },
+  "homepage": "https://github.com/hadijahangiri/mobileMask#readme"
+}
