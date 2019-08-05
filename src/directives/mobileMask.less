@@ -1,0 +1,37 @@
+@backgroundcolor : #daecf4;
+@borderColor: #94c0d2;
+
+.mobile-mask {
+  background-color: @backgroundcolor;
+  border: 1px solid @borderColor;
+  border-radius: 5px;
+  width: auto;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+
+  .mobile-mask-plus {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 10px;
+    float: left;
+  }
+
+  .mobile-mask-country-code {
+    width: 40px;
+    height: 100%;
+    border: 1px solid #999;
+    float: left;
+  }
+
+  .mobile-mask-number {
+    width: 30px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin: 0 1px;
+  }
+}

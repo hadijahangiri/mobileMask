@@ -1,0 +1,21 @@
+<html ng-app="app">
+  <head>
+    <title>Mobile Input Mask</title>
+    <!-- Author : Hadi Jahangiri
+        github: https://github.com/hadijahangiri -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <script src="../example/dist/ngMobileMask.js"></script>
+    <script src="../example/dist/app.js"></script>
+    <link rel="stylesheet" href="../src/directives/mobileMask.css" />
+  </head>
+  <body>
+    <h1>Mask Example:</h1>
+
+    <mobile-mask
+      country-code="98"
+      number-count="10"
+      ng-model="test"
+      valid-numbers-for-first-number="'1-9'"
+    ></mobile-mask>
+  </body>
+</html>
