@@ -1,5 +1,9 @@
 (function() {
   "use strict";
+  angular.module("ngMobileMask", []);
+})();
+(function() {
+  "use strict";
   angular.module("ngMobileMask").directive("mobileMask", [
     function() {
       return {
@@ -10,7 +14,8 @@
           numberCount: "=",
           validNumbersForFirstNumber: "=",
           ngModel: "=",
-          errors: "="
+          errors: "=",
+          isValid: "="
         },
         template:
           '<div class="mobile-mask"> ' +
@@ -23,8 +28,8 @@
         link: function($scope, $element) {
           $scope.numbers = [];
           $scope.errors = [];
+          $scope.isValid = false;
 
-          console.log($scope.validNumbersForFirstNumber);
           for (var i = 0; i < $scope.numberCount; i++) {
             $scope.numbers.push({ id: i });
           }
@@ -69,12 +74,18 @@
               document.getElementById(item.id + 1).select();
             }
 
-            var ouput = "+" + $scope.countryCode;
+            var output = "+" + $scope.countryCode;
             angular.forEach($scope.numbers, function(number) {
-              if (number.value) ouput += number.value;
+              if (number.value) output += number.value;
             });
 
-            $scope.ngModel = ouput;
+            if (
+              output.length ===
+              $scope.countryCode.toString().length + $scope.numberCount + 1
+            ) {
+              $scope.ngModel = output;
+              $scope.isValid = true;
+            } else $scope.isValid = false;
           };
         }
       };

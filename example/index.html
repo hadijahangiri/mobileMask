@@ -17,6 +17,7 @@
       ng-model="phone"
       valid-numbers-for-first-number="'1-9'"
       errors="errors"
+      is-valid="isValid"
     ></mobile-mask>
 
     {{ phone }}
@@ -25,6 +26,10 @@
 
     <p ng-repeat="error in errors">
       {{ error }}
+    </p>
+
+    <p>
+      {{ isValid }}
     </p>
   </body>
 </html>
