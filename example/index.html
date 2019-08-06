@@ -16,8 +16,15 @@
       number-count="10"
       ng-model="phone"
       valid-numbers-for-first-number="'1-9'"
+      errors="errors"
     ></mobile-mask>
 
     {{ phone }}
+
+    <br />
+
+    <p ng-repeat="error in errors">
+      {{ error }}
+    </p>
   </body>
 </html>

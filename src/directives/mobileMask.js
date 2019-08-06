@@ -9,7 +9,8 @@
           countryCode: "=",
           numberCount: "=",
           validNumbersForFirstNumber: "=",
-          ngModel: "="
+          ngModel: "=",
+          errors: "="
         },
         template:
           '<div class="mobile-mask"> ' +
@@ -18,10 +19,11 @@
           'ng-repeat="item in numbers"' +
           'ng-model="item.value"' +
           'ng-keyup="checkNumber(item)" />' +
-          '<div class="mobile-mask-error">{{error}}</div>' +
           "</div>",
         link: function($scope, $element) {
           $scope.numbers = [];
+          $scope.errors = [];
+
           console.log($scope.validNumbersForFirstNumber);
           for (var i = 0; i < $scope.numberCount; i++) {
             $scope.numbers.push({ id: i });
@@ -34,7 +36,9 @@
             var max = parseInt(validNumbers[1]);
             if (parseInt(item.value) < min || parseInt(item.value) > max) {
               item.value = "";
-              $scope.error = "number should be between " + min + " and " + max;
+              $scope.errors.push(
+                "number should be between " + min + " and " + max
+              );
               result = false;
             }
             return result;
@@ -71,7 +75,6 @@
             });
 
             $scope.ngModel = ouput;
-            console.log(ouput);
           };
         }
       };
