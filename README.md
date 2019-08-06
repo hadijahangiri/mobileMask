@@ -17,10 +17,7 @@ npm i mobilemask
 Load the script files in your application:
 
 ```html
-<script
-  type="text/javascript"
-  src="node_modules/mobilemask/dist/mobileMask.js"
-></script>
+<script type="text/javascript" src="node_modules/mobilemask/dist/mobileMask.js"></script>
 ```
 
 ```javascript
@@ -59,3 +56,7 @@ if first number less or bigger than valid numbers
 ```html
 <link href="dist/css/myStyles.css" rel="node_modules/mobilemask/dist/mobileMask.css"/>
 ```
+
+
+
+<a href="http://mm.hadijahangiri.ir/" target="_blank">Demo</a>
