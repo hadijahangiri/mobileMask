@@ -59,8 +59,10 @@
             if (
               isOk &&
               item.id !== $scope.numbers[$scope.numbers.length - 1].id
-            )
+            ) {
               document.getElementById(item.id + 1).focus();
+              document.getElementById(item.id + 1).select();
+            }
 
             var ouput = "+" + $scope.countryCode;
             angular.forEach($scope.numbers, function(number) {
