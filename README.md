@@ -59,4 +59,4 @@ if first number less or bigger than valid numbers
 
 
 
-<a href="http://mm.hadijahangiri.ir/" taget="_blank">Demo</a>
+<a href="http://mm.hadijahangiri.ir/" target="_blank">Demo</a>
