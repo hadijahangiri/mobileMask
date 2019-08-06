@@ -1,5 +1,9 @@
 (function() {
   "use strict";
+  angular.module("ngMobileMask", []);
+})();
+(function() {
+  "use strict";
   angular.module("ngMobileMask").directive("mobileMask", [
     function() {
       return {
