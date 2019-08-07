@@ -8,19 +8,20 @@
     function() {
       return {
         restrict: "A,E",
-        require: "ngModel",
+        require: ["ngModel"],
         scope: {
           countryCode: "=",
           numberCount: "=",
           validNumbersForFirstNumber: "=",
           ngModel: "=",
           errors: "=",
-          isValid: "="
+          isValid: "=",
+          maskId: "="
         },
         template:
           '<div class="mobile-mask"> ' +
           '<span class="mobile-mask-plus">+{{countryCode}}</span>' +
-          '<input id="{{item.id}}" class="mobile-mask-number"' +
+          '<input id="{{maskId}}_{{item.id}}" class="mobile-mask-number"' +
           'ng-repeat="item in numbers"' +
           'ng-model="item.value"' +
           'ng-keyup="checkNumber(item)" />' +
@@ -70,8 +71,12 @@
               isOk &&
               item.id !== $scope.numbers[$scope.numbers.length - 1].id
             ) {
-              document.getElementById(item.id + 1).focus();
-              document.getElementById(item.id + 1).select();
+              document
+                .getElementById($scope.maskId + "_" + (item.id + 1))
+                .focus();
+              document
+                .getElementById($scope.maskId + "_" + (item.id + 1))
+                .select();
             }
 
             var output = "+" + $scope.countryCode;

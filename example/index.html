@@ -12,12 +12,25 @@
     <h1>Mask Example:</h1>
 
     <mobile-mask
+      mask-id="'phone'"
       country-code="98"
       number-count="10"
       ng-model="phone"
       valid-numbers-for-first-number="'1-9'"
       errors="errors"
       is-valid="isValid"
+    ></mobile-mask>
+
+    <hr />
+
+    <mobile-mask
+      mask-id="'mobile'"
+      country-code="98"
+      number-count="10"
+      ng-model="mobile"
+      valid-numbers-for-first-number="'1-9'"
+      errors="mobileerrors"
+      is-valid="mobileisValid"
     ></mobile-mask>
 
     {{ phone }}
