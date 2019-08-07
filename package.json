@@ -1,6 +1,6 @@
 {
   "name": "mobilemask",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Mobile mask directive for angularjs",
   "main": "index.js",
   "directories": {
