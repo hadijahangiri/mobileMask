@@ -81,7 +81,11 @@
 
             var output = "+" + $scope.countryCode;
             angular.forEach($scope.numbers, function(number) {
-              if (number.value) output += number.value;
+              if (number.value) {
+                output += number.value;
+              } else if (number.value === 0) {
+                output += number.value;
+              }
             });
 
             if (
